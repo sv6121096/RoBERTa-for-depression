@@ -4,7 +4,7 @@ import torch
 import matplotlib.pyplot as plt
 
 device = "cpu"
-model_path = "C:/Users/twitc/Downloads/project/results12.1/checkpoint-246" # Load model and tokenizer
+model_path = "C:/Users/twitc/Downloads/project/results13" # Load model and tokenizer
 model = RobertaForSequenceClassification.from_pretrained(model_path).to(device)
 tokenizer = RobertaTokenizer.from_pretrained(model_path)
 model.eval()
