@@ -1,9 +1,8 @@
 # RoBERTa for predicting depression
----
 This project involves training and deploying for interview-style dialogue analysis and classification in case of detecting depression.
 The model has been trained on DAIC-WOZ dataset which is not available in public domain but upon reasonable request.
 The current model has achieved a macro avg F1 of 0.82 
----
+
 
 ## Dataset Source
 
