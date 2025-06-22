@@ -6,9 +6,9 @@ import contractions
 from transformers import RobertaTokenizerFast, RobertaModel
 from sklearn.metrics.pairwise import cosine_similarity
 
-model_path = "C:/Users/twitc/Downloads/project/results13"#load model
-tokenizer = RobertaTokenizerFast.from_pretrained(model_path)
-model = RobertaModel.from_pretrained(model_path)
+
+tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base")
+model = RobertaModel.from_pretrained("roberta-base")
 model.eval()
 
 # Load data
