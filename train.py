@@ -1,4 +1,4 @@
-from transformers import RobertaTokenizerFast, RobertaForSequenceClassification, Trainer, TrainingArguments, EarlyStoppingCallback, RobertaConfig
+from transformers import RobertaTokenizer, RobertaForSequenceClassification, Trainer, TrainingArguments, EarlyStoppingCallback, RobertaConfig
 from datasets import Dataset
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.model_selection import train_test_split
@@ -11,7 +11,7 @@ import os
 os.makedirs("./results13", exist_ok=True) #results and logs directory
 os.makedirs("./logs12.2", exist_ok=True)
 
-tokenizer = RobertaTokenizerFast.from_pretrained("roberta-base") #load the model
+tokenizer = RobertaTokenizer.from_pretrained("roberta-base") #load the model
 c = RobertaConfig.from_pretrained("roberta-base", num_labels=2, hidden_dropout_prob=0.2)
 model = RobertaForSequenceClassification.from_pretrained("roberta-base", config=c)
 
