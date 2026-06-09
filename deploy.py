@@ -107,7 +107,7 @@ def check2(u):
 s=input("Name\n")
 a=input("Age\n")
 g=input("Gender\n")
-
+c= ""
 
 history_followup=False
 
@@ -173,11 +173,10 @@ history_ratio= (
 
 
 
-if affect_ratio>=0.5 and cognitive_ratio>=0.5:
-
-    print("\nIndicators of depression are present")
+if (affect_ratio>=0.5 and cognitive_ratio>=0.5) or (affect_ratio>=0.5 and somatic_ratio>=0.5):
+    c= "Indicators of depression are present"
+    print(c)
     r="Y"
-
 
 elif (
 (somatic_ratio>=0.5) and (social_ratio>=0.5 or
@@ -187,9 +186,8 @@ elif (
     cognitive_ratio<0.5
 ):
 
-    print(
-        "\nFurther inquiry required into somatic complaints and patient history."
-    )
+    c= "Further inquiry required into somatic complaints and patient history."
+    print(c)
 
     r="N"
 
@@ -203,26 +201,28 @@ elif (
     cognitive_ratio<0.5
 ):
 
-    print(
-        "\nNo indicators of depression at present but further inquiry into history of symptoms is suggested."
-    )
+    c= "No indicators of depression at present but further inquiry into history of symptoms is suggested."
+    print(c)
+    
 
     r="N"
 
 
 else:
 
-    print("\nNo indicators of depression")
+    c= "No indicators of depression"
+    print(c)
     r="N"
 
 
-row=[[s,a,g,r]]
+row=[[s,a,g,r,c]]
 
 columns=[
     'Name',
     'Age',
     'Gender',
     'Indicators of depression'
+    'Comments'
 ]
 
 df=pd.DataFrame(row,columns=columns)
