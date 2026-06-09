@@ -186,7 +186,7 @@ elif (
     cognitive_ratio<0.5
 ):
 
-    c= "Further inquiry required into somatic complaints and patient history."
+    c= "Further inquiry required into somatic complaints and patient's profile."
     print(c)
 
     r="N"
