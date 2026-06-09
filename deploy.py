@@ -3,11 +3,11 @@ import torch
 import pandas as pd
 
 tokenizer = RobertaTokenizer.from_pretrained(
-    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/checkpoint-246"
+    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/results12"
 )
 
 model = RobertaForSequenceClassification.from_pretrained(
-    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/checkpoint-246"
+    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/results12"
 )
 
 
@@ -173,7 +173,7 @@ history_ratio= (
 
 
 
-if (affect_ratio>=0.5 and cognitive_ratio>=0.5) or (affect_ratio>=0.5 and somatic_ratio>=0.5):
+if affect_ratio >= 0.5 and (cognitive_ratio>=0.5 or somatic_ratio>=0.5 or social_ratio>=0.5 or history_ratio>=0.5):
     c= "Indicators of depression are present"
     print(c)
     r="Y"
@@ -221,7 +221,7 @@ columns=[
     'Name',
     'Age',
     'Gender',
-    'Indicators of depression'
+    'Indicators of depression',
     'Comments'
 ]
 
