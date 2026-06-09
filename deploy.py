@@ -3,11 +3,11 @@ import torch
 import pandas as pd
 
 tokenizer = RobertaTokenizer.from_pretrained(
-    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/results12"
+    "C:/Users/abc/Downloads/RoBERTa-for-depression-main/results12"
 )
 
 model = RobertaForSequenceClassification.from_pretrained(
-    "C:/Users/aryan/Downloads/RoBERTa-for-depression-main/results12"
+    "C:/Users/abc/Downloads/RoBERTa-for-depression-main/results12"
 )
 
 
