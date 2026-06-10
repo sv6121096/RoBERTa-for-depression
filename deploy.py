@@ -178,28 +178,19 @@ if affect_ratio >= 0.5 and (cognitive_ratio>=0.5 or somatic_ratio>=0.5 or social
     print(c)
     r="Y"
 
-elif (
-(somatic_ratio>=0.5) and (social_ratio>=0.5 or
-    history_ratio>=0.5)
-) and (
-    affect_ratio<0.5 and
-    cognitive_ratio<0.5
-):
+elif (somatic_ratio>=0.5 and cognitive_ratio>=0.5) and (social_ratio>=0.5 or history_ratio>=0.5) and affect_ratio<0.5:
 
-    c= "Further inquiry required into somatic complaints and patient's profile."
+    c= "Further inquiry required into somatic and cognitive complaints."
     print(c)
 
     r="N"
 
 
-elif (
-    history_ratio>=0.5
-) and (
+elif history_ratio>=0.5 and (
     somatic_ratio<0.5 and
     social_ratio<0.5 and
     affect_ratio<0.5 and
-    cognitive_ratio<0.5
-):
+    cognitive_ratio<0.5):
 
     c= "No indicators of depression at present but further inquiry into history of symptoms is suggested."
     print(c)
